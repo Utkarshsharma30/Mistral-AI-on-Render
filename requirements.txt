@@ -4,5 +4,7 @@ pydantic>=2.0
 requests>=2.31.0
 httpx>=0.24.0
 python-dotenv>=1.0.0
-llama-cpp-python>=0.2.50
-huggingface-hub>=0.20.0
+# Optional for local GGUF self-hosting (not recommended for Render Free Tier):
+# llama-cpp-python>=0.2.50
+# huggingface-hub>=0.20.0
+

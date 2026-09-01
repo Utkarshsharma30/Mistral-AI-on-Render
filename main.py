@@ -33,7 +33,7 @@ app.add_middleware(
 ENGINE_MODE = os.getenv("ENGINE_MODE", "proxy").lower()  # Options: 'llama_cpp', 'remote_ollama', 'mistral_api', 'proxy'
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
 MISTRAL_API_KEY = os.getenv("MISTRAL_API_KEY", "")
-MISTRAL_MODEL = os.getenv("MISTRAL_MODEL", "mistral-tiny")
+MISTRAL_MODEL = os.getenv("MISTRAL_MODEL", "mistral-small-latest")
 MODEL_REPO = os.getenv("MODEL_REPO", "TheBloke/Mistral-7B-Instruct-v0.2-GGUF")
 MODEL_FILE = os.getenv("MODEL_FILE", "mistral-7b-instruct-v0.2.Q4_K_M.gguf")
 

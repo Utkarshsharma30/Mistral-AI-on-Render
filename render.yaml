@@ -2,18 +2,19 @@ services:
   - type: web
     name: mistral-ai-chatbot-api
     env: docker
-    plan: starter # Options: free, starter (2GB RAM), standard (8GB RAM)
+    plan: free # Free Tier on Render (512 MB RAM limit)
     autoDeploy: true
     envVars:
       - key: ENGINE_MODE
-        value: proxy # Change to 'remote_ollama' or 'llama_cpp' as needed
+        value: proxy # Set to 'proxy' for Mistral Cloud API
       - key: OLLAMA_BASE_URL
         value: https://your-ngrok-tunnel.ngrok-free.app
       - key: MISTRAL_API_KEY
         sync: false
       - key: MISTRAL_MODEL
-        value: mistral-tiny
+        value: mistral-small-latest
       - key: MODEL_REPO
         value: TheBloke/Mistral-7B-Instruct-v0.2-GGUF
       - key: MODEL_FILE
         value: mistral-7b-instruct-v0.2.Q4_K_M.gguf
+

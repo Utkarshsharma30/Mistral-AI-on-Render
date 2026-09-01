@@ -5,12 +5,9 @@ FROM python:3.10-slim
 ENV PYTHONUNBUFFERED=1 \
     PYTHONDONTWRITEBYTECODE=1
 
-# Install build dependencies for compiling llama-cpp C++ extensions if needed
+# Install curl for healthchecks
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    cmake \
     curl \
-    git \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
